@@ -1,0 +1,318 @@
+
+
+.searchfield input {
+    color: #fff;
+    width: 100%;
+}
+
+.searchfield .bar {
+    width: 105%;
+}
+
+.searchfield input:focus~label, .searchfield input:valid~label {
+    top: -4px !important;
+}
+
+.group {
+    position: relative;
+    margin-top: 15px;
+    /*margin-bottom: 15px;*/
+}
+
+.group.searchfield {
+    margin-top: inherit !important;
+    margin-bottom: 4px !important;
+}
+
+
+.vod_searchbox input.searchTxt {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #1abc9c;
+    text-align: center;
+    background: transparent;
+    border-radius: inherit;
+    font: inherit;
+    margin: inherit;
+    outline: inherit;
+    width: inherit;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: inherit !important;
+    margin: 0px !important;
+}
+
+/* LABEL ======================================= */
+
+.inputLabel {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+
+/* active state */
+
+input:focus~.inputLabel, input:valid~.inputLabel {
+    top: -10px;
+    font-size: 10px;
+    color: #1abc9c;
+}
+
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+    position: relative;
+    display: block;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #1abc9c;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+
+/* active state */
+
+input:focus~.bar:before, input:focus~.bar:after {
+    width: 50%;
+}
+
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* active state */
+
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #1abc9c;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #1abc9c;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #1abc9c;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+
+/* phonepad */
+
+.phonePad {
+    text-align: center;
+    padding-top: 8px;
+}
+
+.phonePad .calling .keyRow>div {
+    margin: 5px;
+    border: 1px solid #cfd7e6;
+}
+
+.phonePad .calling .keyRow>div i {
+    font-size: 30px;
+    color: #2a3a4b;
+}
+
+.phonePad .callingRow>div {
+    margin: 5px;
+}
+
+.phonePad .keyRow>div {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #888;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+
+.phonePad .keyRow>div:hover {
+    background: #ececec;
+}
+
+.phonePad .keyRow>div.call:hover {
+    background: #01cb56;
+    color: #000;
+}
+
+.phonePad .inputRow {
+    text-align: center;
+    display: inline-block;
+}
+
+.phonePad .keyRow span {
+    display: block;
+    color: #444;
+    text-align: center;
+    font-size: 8px;
+}
+
+.phonePad .keyRow .call {
+    padding-top: 13px;
+    height: 25px;
+    background: #01cb56;
+    box-shadow: 0px 3px 6px #888888;
+    border: 1px solid #01cb56;
+    color: #fff;
+    font-size: 20px;
+}
+
+.phonePad .calling {
+    padding-top: 50px;
+}
+
+.phonePad .calling .callstatus {
+    height: 24px;
+    font-size: 18px;
+    text-align: center;
+    color: #2a3a4b;
+}
+
+.phonePad .calling .callnumber {
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 0.2px;
+    padding-top: 16px;
+}
+
+.phonePad .calling .callinfo {
+    font-size: 13px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #778899;
+}
+
+.phonePad .calling .callavator {
+    display: inline-block;
+}
+
+.phonePad .calling .keyRow>div span {
+    padding-top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #16325c;
+}
+
+.phonePad .hangup {
+    background-color: #fb584c;
+}
+
+.phonePad .hangup i {
+    color: #fff !important;
+}
+
+#callingCircle {
+    margin-top: 35px;
+    margin-bottom: 36px;
+    background: #cfd7e6;
+    border: 1px solid #888888;
+    position: relative;
+    height: 125px;
+    width: 125px;
+    line-height: 135px;
+}
+
+#callingCircle .callingAvator {
+    font-size: 45px;
+    color: #fff;
+}
+
+@keyframes blink {
+    50% {
+        border-color: #ececec;
+    }
+}
+
+#callingCircle, #callingCircle:before, #callingCircle:after {
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    animation: blink .5s step-end infinite alternate;
+}
+
+#callingCircle:before {
+    border: 1px solid #A0A0A0;
+    content: '';
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+}
+
+#callingCircle:after {
+    border: 1px solid #888888;
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+}

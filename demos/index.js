@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import InfiniteScroll from '../app';
+import PhoneDialer from '../app';
 
 const divs = [
   <div key={1} style={{height: 200, background: 'cornsilk'}}>Big div no 1</div>,
@@ -38,14 +38,9 @@ export default class DialPad extends React.Component {
   render () {
     return (
       <div>
-        <h3>{heightMessage}</h3>
-        <InfiniteScroll
+        <PhoneDialer
           next={this.generateDivs}
-          hasMore={true}
-          height={300}
-          loader={<h4>Loading...</h4>}>
-          {this.state.divs}
-        </InfiniteScroll>
+        />        
       </div>
     );
   }
