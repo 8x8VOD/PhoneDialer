@@ -2,7 +2,7 @@
   "name": "8x8_phonedialer",
   "version": "1.0.0",
   "description": "8x8 Phone Dialer",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,5 +26,9 @@
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "dev" : "webpack-dev-server --progress --colors",
+    "prod" : "webpack --progress -p"
   }
 }
