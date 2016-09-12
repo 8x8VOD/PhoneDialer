@@ -8,5 +8,8 @@ class PhoneDialer extends React.Component {
     )
   }
 }
-
+PhoneDialer.propTypes = {
+  next: PropTypes.func,
+  style: PropTypes.object,  
+};
 // ReactDOM.render(<PhoneDialer/>, document.getElementById('PhoneDialer'));
