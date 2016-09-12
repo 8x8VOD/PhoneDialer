@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 class PhoneDialer extends React.Component {
   render() {
@@ -9,4 +9,4 @@ class PhoneDialer extends React.Component {
   }
 }
 
-ReactDOM.render(<PhoneDialer/>, document.getElementById('PhoneDialer'));
+// ReactDOM.render(<PhoneDialer/>, document.getElementById('PhoneDialer'));
