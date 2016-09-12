@@ -5,7 +5,7 @@ Welcome to Virtual Office Phone Dialer Module.
 This Module is base on ES6 and ReactJS.
 
 ## Demo
-![Screenshot]<img src="https://github.com/8x8VOD/PhoneDialer/blob/master/demos/dialer-ui.gif" alt="demo" />
+<img src="https://github.com/8x8VOD/PhoneDialer/blob/master/demos/dialer-ui.gif" alt="demo" height="300px" />
 
 ## Installation
 package.json
