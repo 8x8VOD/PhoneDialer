@@ -1,4 +1,16 @@
 
+.close_dialog {
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    right: 15px;
+    top: 15px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: #888;
+}
 
 .searchfield input {
     color: #fff;

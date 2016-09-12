@@ -11,8 +11,12 @@ export default class PhoneDialer extends Component {
     }
     this.onHangupClick = this.onHangupClick.bind(this);
     this.onCallingClick = this.onCallingClick.bind(this);
+    this.onModuleCloseDialerClick = this.onModuleCloseDialerClick.bind(this);
   }
 
+  onModuleCloseDialerClick() {
+    this.props.onCloseDialer();
+  }
   onCallingClick() {
     this.setState({ phonePadIndex: 1 });
   }
@@ -30,14 +34,13 @@ export default class PhoneDialer extends Component {
     };
     return (
       <div style={style}>
-      <div className="fabPhoneDialer">
         <div
           className="phonePad"
           style={{ height: '100%' }}
         >
           <SwipeableViews index={this.state.phonePadIndex} >
           <div>
-            <div className="close_dialog pull-right" onClick={this.onLeftDialPadClick}>
+            <div className="close_dialog pull-right" onClick={this.onModuleCloseDialerClick}>
               <i className="fa fa-plus" />
             </div>
             <div className="inputRow">
@@ -103,7 +106,6 @@ export default class PhoneDialer extends Component {
           </div>
           </SwipeableViews>
         </div>
-      </div>
         {this.props.children}
       </div>
     );
@@ -111,6 +113,8 @@ export default class PhoneDialer extends Component {
 }
 
 PhoneDialer.propTypes = {
+  onCloseDialer: PropTypes.func,
+
   children: PropTypes.node,
   style: PropTypes.object,
 };
