@@ -1,34 +1,42 @@
 {
-  "name": "8x8_phonedialer",
+  "name": "8x8_PhoneDialer",
   "version": "1.0.0",
-  "description": "8x8 Phone Dialer",
-  "main": "bundle.js",
+  "description": "8x8 PhoneDialer Module",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development node server.js",
+    "build-demos": "NODE_ENV=development node_modules/.bin/webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "NODE_ENV=production node_modules/.bin/webpack --config webpack.config.js"
+  },
+  "directories": {
+    "demos": "demos"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/8x8VOD/PhoneDialer.git"
+     "url": "git+https://github.com/8x8VOD/PhoneDialer.git"
   },
-  "author": "Tony Chen",
+  "keywords": [
+    "react",
+    "PhoneDialer"
+  ],
+  "author": "Tony Chen <tony.chen@8x8.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/8x8VOD/PhoneDialer/issues"
+      "url": "https://github.com/8x8VOD/PhoneDialer/issues"
   },
   "homepage": "https://github.com/8x8VOD/PhoneDialer#readme",
-  "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
-  },
+
   "devDependencies": {
-    "babel-core": "^6.14.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
-    "webpack": "^1.13.2"
-  },
-  "scripts": {
-    "dev" : "webpack-dev-server --progress --colors",
-    "prod" : "webpack --progress -p"
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.1",
+    "eslint-plugin-react": "^3.5.1",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.10.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1",
+    "webpack-hot-middleware": "^2.10.0"
   }
 }

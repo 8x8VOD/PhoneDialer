@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import debounce from './utils/debounce';
 
 export default class PhoneDialer extends Component {
   constructor (props) {
@@ -9,16 +10,16 @@ export default class PhoneDialer extends Component {
       actionTriggered: false
     };
     this.onScrollListener = this.onScrollListener.bind(this);
-
+    this.debouncedOnScrollListener = debounce(this.onScrollListener, 150).bind(this);
   }
 
   componentDidMount () {
     this.el = this.props.height ? this.refs.infScroll : window;
-
+    this.el.addEventListener('scroll', this.debouncedOnScrollListener);
   }
 
   componentWillUnmount () {
-
+    this.el.removeEventListener('scroll', this.debouncedOnScrollListener);
   }
 
   componentWillReceiveProps (props) {
@@ -69,7 +70,8 @@ export default class PhoneDialer extends Component {
     const style = {
       height: this.props.height || 'auto',
       overflow: 'auto',
-      WebkitOverflowScrolling: 'touch'
+      WebkitOverflowScrolling: 'touch',
+      ...this.props.style
     };
     const hasChildren = this.props.hasChildren || !!(this.props.children && this.props.children.length);
     return (
