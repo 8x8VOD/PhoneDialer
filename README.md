@@ -8,11 +8,32 @@ This Module is base on ES6 and ReactJS.
 <img src="https://github.com/8x8VOD/PhoneDialer/blob/master/demos/dialer-ui.gif" alt="demo" height="300px" />
 
 ## Installation
-package.json
 
+```js
+package.json
 "dependencies": {
   "PhoneDialer": "https://github.com/8x8VOD/PhoneDialer.git",
 }
+```
+
+## Usage
+
+```js
+import PhoneDialer from '8x8_PhoneDialer';
+
+<PhoneDialer
+  onCloseDialer={this.onCloseDialer}
+  onSubmitNumber={this.onSubmitNumber}
+  onMute={this.onMute}
+  onVideo={this.onVideo}
+  onAddCall={this.onAddCall}
+  onTransferCall={this.onTransferCall}
+  onRecord={this.onRecord}
+  onHold={this.onHold}
+  onPark={this.onPark}
+  onHangup={this.onHangup}
+/>
+```
 
 ## Props
 name | type | description
@@ -27,3 +48,11 @@ name | type | description
 **onHold** | function |  
 **onPark** | function |  
 **onHangup** | function |
+
+## Extra
+npm
+
+"dev": "NODE_ENV=development node server.js",
+"build-demos": "NODE_ENV=development node_modules/.bin/webpack",
+"test": "echo \"Error: no test specified\" && exit 1",
+"prepublish": "NODE_ENV=production node_mod
