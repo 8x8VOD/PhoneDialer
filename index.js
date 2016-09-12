@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 // import ReactDOM from 'react-dom';
 
 class PhoneDialer extends React.Component {
@@ -10,6 +10,6 @@ class PhoneDialer extends React.Component {
 }
 PhoneDialer.propTypes = {
   next: PropTypes.func,
-  style: PropTypes.object,  
+  style: PropTypes.object,
 };
 // ReactDOM.render(<PhoneDialer/>, document.getElementById('PhoneDialer'));
