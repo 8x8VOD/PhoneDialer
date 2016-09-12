@@ -11,6 +11,7 @@ This Module is base on ES6 and ReactJS.
 
 ```js
 package.json
+
 "dependencies": {
   "PhoneDialer": "https://github.com/8x8VOD/PhoneDialer.git",
 }
@@ -51,7 +52,7 @@ name | type | description
 
 ## Extra
 
-npm run dev 
+npm run dev
 
 npm run build-demos
 
