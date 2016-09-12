@@ -50,9 +50,9 @@ name | type | description
 **onHangup** | function |
 
 ## Extra
-npm
 
-"dev": "NODE_ENV=development node server.js",
-"build-demos": "NODE_ENV=development node_modules/.bin/webpack",
-"test": "echo \"Error: no test specified\" && exit 1",
-"prepublish": "NODE_ENV=production node_mod
+npm run dev 
+
+npm run build-demos
+
+npm run prepublish
