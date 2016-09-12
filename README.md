@@ -20,20 +20,45 @@ package.json
 ## Usage
 
 ```js
+
 import PhoneDialer from '8x8_PhoneDialer';
 
-<PhoneDialer
-  onCloseDialer={this.onCloseDialer}
-  onSubmitNumber={this.onSubmitNumber}
-  onMute={this.onMute}
-  onVideo={this.onVideo}
-  onAddCall={this.onAddCall}
-  onTransferCall={this.onTransferCall}
-  onRecord={this.onRecord}
-  onHold={this.onHold}
-  onPark={this.onPark}
-  onHangup={this.onHangup}
-/>
+export default class AwesomeVOD extends React.Component {
+  constructor () {
+    super();
+    this.onCloseDialer = this.onCloseDialer.bind(this);
+    this.onSubmitNumber = this.onSubmitNumber.bind(this);
+    ...
+  }
+
+  onCloseDialer() {
+    window.alert("close");
+  }
+  onSubmitNumber(phoneNumber) {
+    window.console.log(phoneNumber);
+  }
+  ...
+
+  render () {
+    return (
+      <div>
+        <PhoneDialer
+          onCloseDialer={this.onCloseDialer}
+          onSubmitNumber={this.onSubmitNumber}
+          onMute={this.onMute}
+          onVideo={this.onVideo}
+          onAddCall={this.onAddCall}
+          onTransferCall={this.onTransferCall}
+          onRecord={this.onRecord}
+          onHold={this.onHold}
+          onPark={this.onPark}
+          onHangup={this.onHangup}
+        />
+      </div>
+    );
+  }
+}
+
 ```
 
 ## Props
