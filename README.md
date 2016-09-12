@@ -1,15 +1,26 @@
 <img src="https://www.8x8.com/images/logo.png" alt="8x8 Logo" />
 
-# Phone Dialer Introduction
+## Phone Dialer Introduction
 Welcome to Virtual Office Phone Dialer Module.
 This Module is base on ES6 and ReactJS.
 
-# Installation
+## Installation
 package.json
 
-"PhoneDialer": "https://github.com/8x8VOD/PhoneDialer.git",
+"dependencies": {
+  "PhoneDialer": "https://github.com/8x8VOD/PhoneDialer.git",
+}
 
-# props
+## Props
 name | type | description
 -----|------|------------
-**onCloseDialer** | function | A callback function after user click on the close dialer
+**onCloseDialer** | function | A function after user click on the close dialer
+**onSubmitNumber(number)** | function | A function after clicked on call button
+**onMute** | function | 
+**onVideo** | function |
+**onAddCall** | function |  
+**onTransferCall** | function |  
+**onRecord** | function |  
+**onHold** | function |  
+**onPark** | function |  
+**onHangup** | function |

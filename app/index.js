@@ -7,18 +7,29 @@ export default class PhoneDialer extends Component {
   constructor (props) {
     super(props);
     this.state = {
-        phonePadIndex: 0
+        phonePadIndex: 0,
+        inputValue: ''
     }
     this.onHangupClick = this.onHangupClick.bind(this);
     this.onCallingClick = this.onCallingClick.bind(this);
     this.onModuleCloseDialerClick = this.onModuleCloseDialerClick.bind(this);
+    this.updateInputValue = this.updateInputValue.bind(this);
+    this.keyPad = this.keyPad.bind(this);
   }
 
   onModuleCloseDialerClick() {
     this.props.onCloseDialer();
   }
+  keyPad(evt) {
+    console.log(evt.target);
+    this.setState({ inputValue: "1"});
+  }
+  updateInputValue(evt){
+     this.setState({ inputValue: evt.target.value });
+  }
   onCallingClick() {
     this.setState({ phonePadIndex: 1 });
+    this.props.onSubmitNumber(this.state.inputValue);
   }
 
   onHangupClick() {
@@ -47,7 +58,7 @@ export default class PhoneDialer extends Component {
               <div className="vod_searchbox">
                 <div className="inputRow">
                   <div className="group">
-                    <input type="text" className="searchTxt" required />
+                    <input type="text" className="searchTxt" value={this.state.inputValue} onChange={this.updateInputValue} required />
                     <span className="highlight" />
                     <span className="bar" />
                     <div className="inputLabel">
@@ -86,7 +97,7 @@ export default class PhoneDialer extends Component {
           <div>
             <div className="calling">
               <div className="callstatus">Calling ...</div>
-              <div className="callnumber">780 986 5643</div>
+              <div className="callnumber">{this.state.inputValue}</div>
               <div className="callinfo">Could be - Suresh Sharma</div>
               <div className="callavator">
                 <div id="callingCircle">
@@ -114,6 +125,16 @@ export default class PhoneDialer extends Component {
 
 PhoneDialer.propTypes = {
   onCloseDialer: PropTypes.func,
+  onSubmitNumber: PropTypes.func,
+  onMute: PropTypes.func,
+  onVideo: PropTypes.func,
+
+  onAddCall: PropTypes.func,
+  onTransferCall: PropTypes.func,
+  onRecord: PropTypes.func,
+  onHold: PropTypes.func,
+  onPark: PropTypes.func,
+  onHangup: PropTypes.func,
 
   children: PropTypes.node,
   style: PropTypes.object,
