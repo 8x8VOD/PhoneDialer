@@ -4,6 +4,9 @@
 Welcome to Virtual Office Phone Dialer Module.
 This Module is base on ES6 and ReactJS.
 
+## Demo
+![Screenshot]<img src="https://github.com/8x8VOD/PhoneDialer/blob/master/demos/dialer-ui.gif" alt="demo" />
+
 ## Installation
 package.json
 
@@ -16,7 +19,7 @@ name | type | description
 -----|------|------------
 **onCloseDialer** | function | A function after user click on the close dialer
 **onSubmitNumber(number)** | function | A function after clicked on call button
-**onMute** | function | 
+**onMute** | function |
 **onVideo** | function |
 **onAddCall** | function |  
 **onTransferCall** | function |  
