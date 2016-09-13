@@ -8,7 +8,8 @@ export default class PhoneDialer extends Component {
     super(props);
     this.state = {
         phonePadIndex: 0,
-        inputValue: ''
+        inputValue: '',
+        callInfo: props.onCallInfo
     }
     this.onHangupClick = this.onHangupClick.bind(this);
     this.onCallingClick = this.onCallingClick.bind(this);
@@ -98,7 +99,7 @@ export default class PhoneDialer extends Component {
             <div className="calling">
               <div className="callstatus">Calling ...</div>
               <div className="callnumber">{this.state.inputValue}</div>
-              <div className="callinfo">Could be - Suresh Sharma</div>
+              <div className="callinfo">{this.props.onCallInfoText}</div>
               <div className="callavator">
                 <div id="callingCircle">
                   <i className="fa fa-user callingAvator" />
@@ -126,6 +127,7 @@ export default class PhoneDialer extends Component {
 PhoneDialer.propTypes = {
   onCloseDialer: PropTypes.func,
   onSubmitNumber: PropTypes.func,
+
   onMute: PropTypes.func,
   onVideo: PropTypes.func,
 
@@ -136,6 +138,7 @@ PhoneDialer.propTypes = {
   onPark: PropTypes.func,
   onHangup: PropTypes.func,
 
+  onCallInfoText: PropTypes.string,
   children: PropTypes.node,
   style: PropTypes.object,
 };

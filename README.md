@@ -21,14 +21,14 @@ package.json
 
 ```js
 
-import PhoneDialer from '8x8_PhoneDialer';
-
-export default class AwesomeVOD extends React.Component {
+export default class DemoDialPad extends React.Component {
   constructor () {
     super();
+    this.state = {
+      callInfoText: ""
+    };
     this.onCloseDialer = this.onCloseDialer.bind(this);
     this.onSubmitNumber = this.onSubmitNumber.bind(this);
-    ...
   }
 
   onCloseDialer() {
@@ -36,8 +36,8 @@ export default class AwesomeVOD extends React.Component {
   }
   onSubmitNumber(phoneNumber) {
     window.console.log(phoneNumber);
+    this.setState({ callInfoText: "CEO - Vikram Verma"});
   }
-  ...
 
   render () {
     return (
@@ -53,6 +53,7 @@ export default class AwesomeVOD extends React.Component {
           onHold={this.onHold}
           onPark={this.onPark}
           onHangup={this.onHangup}
+          onCallInfoText={this.state.callInfoText}
         />
       </div>
     );
