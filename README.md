@@ -21,6 +21,8 @@ package.json
 
 ```js
 
+import PhoneDialer from '8x8_PhoneDialer';
+
 export default class DemoDialPad extends React.Component {
   constructor () {
     super();
