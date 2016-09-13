@@ -15,16 +15,13 @@ export default class PhoneDialer extends Component {
     this.onCallingClick = this.onCallingClick.bind(this);
     this.onModuleCloseDialerClick = this.onModuleCloseDialerClick.bind(this);
     this.updateInputValue = this.updateInputValue.bind(this);
-    this.keyPad = this.keyPad.bind(this);
+
   }
 
   onModuleCloseDialerClick() {
     this.props.onCloseDialer();
   }
-  keyPad(evt) {
-    console.log(evt.target);
-    this.setState({ inputValue: "1"});
-  }
+
   updateInputValue(evt){
      this.setState({ inputValue: evt.target.value });
   }
