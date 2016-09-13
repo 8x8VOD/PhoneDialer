@@ -13,7 +13,7 @@ This Module is base on ES6 and ReactJS.
 package.json
 
 "dependencies": {
-  "PhoneDialer": "https://github.com/8x8VOD/PhoneDialer.git",
+  "8x8_PhoneDialer": "https://github.com/8x8VOD/PhoneDialer.git",
 }
 ```
 
