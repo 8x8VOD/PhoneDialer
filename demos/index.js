@@ -18,7 +18,7 @@ export default class DemoDialPad extends React.Component {
   }
   onSubmitNumber(phoneNumber) {
     window.console.log(phoneNumber);
-    this.setState({ callInfoText: "CEO - Vikram Verma"});
+    this.setState({ callInfoText: 'CEO - Vikram Verma'});
   }
 
   render () {
