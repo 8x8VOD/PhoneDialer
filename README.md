@@ -49,6 +49,7 @@ export default class DemoDialPad extends React.Component {
           onSubmitNumber={this.onSubmitNumber}
           onMute={this.onMute}
           onVideo={this.onVideo}
+          onDialPad={this.onDialPad}
           onAddCall={this.onAddCall}
           onTransferCall={this.onTransferCall}
           onRecord={this.onRecord}
@@ -71,6 +72,7 @@ name | type | description
 **onSubmitNumber(number)** | function | A function after clicked on call button
 **onMute** | function |
 **onVideo** | function |
+**onDialPad** | function |
 **onAddCall** | function |  
 **onTransferCall** | function |  
 **onRecord** | function |  

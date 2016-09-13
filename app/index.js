@@ -16,18 +16,63 @@ export default class PhoneDialer extends Component {
     this.onModuleCloseDialerClick = this.onModuleCloseDialerClick.bind(this);
     this.updateInputValue = this.updateInputValue.bind(this);
 
+    this.onMuteClick = this.onMuteClick.bind(this);
+    this.onVideoClick = this.onVideoClick.bind(this);
+
+    this.onDialPadClick = this.onDialPadClick.bind(this);
+    this.onAddCallClick = this.onAddCallClick.bind(this);
+    this.onTransferCallClick = this.onTransferCallClick.bind(this);
+    this.onRecordClick = this.onRecordClick.bind(this);
+    this.onHoldClick = this.onHoldClick.bind(this);
+    this.onParkClick = this.onParkClick.bind(this);
+    this.onHangupClick = this.onHangupClick.bind(this);
+
+  }
+
+  updateInputValue(evt){
+     this.setState({ inputValue: evt.target.value });
   }
 
   onModuleCloseDialerClick() {
     this.props.onCloseDialer();
   }
 
-  updateInputValue(evt){
-     this.setState({ inputValue: evt.target.value });
-  }
   onCallingClick() {
     this.setState({ phonePadIndex: 1 });
     this.props.onSubmitNumber(this.state.inputValue);
+  }
+
+  onMuteClick() {
+    this.props.onMute();
+  }
+
+  onVideoClick() {
+    this.props.onVideo();
+  }
+
+  onDialPadClick() {
+    this.props.onDialPad();
+    this.setState({ phonePadIndex: 0 });
+  }
+
+  onAddCallClick() {
+    this.props.onAddCall();
+  }
+
+  onTransferCallClick() {
+    this.props.onTransferCall();
+  }
+
+  onRecordClick() {
+    this.props.onRecord();
+  }
+
+  onHoldClick() {
+    this.props.onHold();
+  }
+
+  onParkClick() {
+    this.props.onPark();
   }
 
   onHangupClick() {
@@ -103,9 +148,26 @@ export default class PhoneDialer extends Component {
                 </div>
               </div>
               <div className="keyRow">
-                <div><i className="fa fa-microphone" /><span>Mute</span></div>
-                <div><i className="fa fa-video-camera" /><span>Video</span></div>
-                <div><i className="fa fa-ellipsis-h" /><span>More</span></div>
+                <div onClick={this.onMuteClick}><i className="fa fa-microphone" /><span>Mute</span></div>
+                <div onClick={this.onVideoClick}><i className="fa fa-video-camera" /><span>Video</span></div>
+                <div className="moreEllipsisMenu">
+                  <div className="moreMenu moreEllipsisMenuTrans">
+                    <ul>
+                      <li onClick={this.onDialPadClick}><div><i className="fa fa-th" /></div><div>Dialpad</div></li>
+                      <li onClick={this.onAddCallClick}><div><i className="fa fa-plus" /></div><div>Add Call</div></li>
+                      <li onClick={this.onTransferCallClick}><div><i className="fa fa-phone" /></div><div>Transfer</div></li>
+                      <li onClick={this.onRecordClick}><div><i className="fa fa-dot-circle-o" /></div><div>Record</div></li>
+                      <li onClick={this.onHoldClick}><div><i className="fa fa-pause" /></div><div>Hold</div></li>
+                      <li onClick={this.onParkClick}><div><i className="fa fa-map-pin" /></div><div>Park</div></li>
+                    </ul>
+
+                    <div className="triangle-down"></div>
+                    <div className="triangle-down sh"></div>
+                  </div>
+                  <i className="fa fa-ellipsis-h" />
+                  <span>More</span>
+
+                </div>
                 <div className="hangup" onClick={this.onHangupClick}>
                   <i className="fa fa-phone" />
                   <span>Hangup</span>
@@ -128,6 +190,7 @@ PhoneDialer.propTypes = {
   onMute: PropTypes.func,
   onVideo: PropTypes.func,
 
+  onDialPad: PropTypes.func,
   onAddCall: PropTypes.func,
   onTransferCall: PropTypes.func,
   onRecord: PropTypes.func,

@@ -1,4 +1,67 @@
+* {
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.moreEllipsisMenu:hover .moreMenu {
+  display: block;
+}
+.moreEllipsisMenuTrans {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.moreMenu {
+  display: none;
+  position: absolute;
+  margin-top: -270px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  margin-left: -16px;
+  padding: 5px;
 
+}
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #ececec;
+  position: absolute;
+    margin-left: 16px;
+    margin-top: 5px;
+
+}
+
+.triangle-down.sh {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 16px solid #fff;
+
+
+}
+.moreMenu ul{
+  list-style-type: none;
+    padding: 0;
+        margin: 0;
+}
+.moreMenu ul li {
+      width: 185px;
+      padding-bottom: 4px;
+padding-top: 4px;
+}
+.moreEllipsisMenu ul li:hover {
+  background-color: #ececec;
+  cursor: pointer;
+}
+.moreMenu ul li > div {
+  display: inline-block;
+width: 70px;
+text-align: left;
+}
 .close_dialog {
     cursor: pointer;
     position: fixed;
@@ -36,7 +99,6 @@
     margin-bottom: 4px !important;
 }
 
-
 .vod_searchbox input.searchTxt {
     font-size: 18px;
     padding: 10px 10px 10px 5px;
@@ -57,6 +119,7 @@ input:focus {
     box-shadow: inherit !important;
     margin: 0px !important;
 }
+
 
 /* LABEL ======================================= */
 
@@ -171,7 +234,6 @@ input:focus~.highlight {
         background: transparent;
     }
 }
-
 
 
 /* phonepad */
