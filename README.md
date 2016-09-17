@@ -2,6 +2,7 @@
 
 ## Phone Dialer Introduction
 Welcome to Virtual Office Phone Dialer Module.
+
 This Module is base on ES6 and ReactJS.
 
 ## Demo
@@ -70,17 +71,18 @@ name | type | description
 -----|------|------------
 **onCloseDialer** | function | A function after user click on the close dialer
 **onSubmitNumber(number)** | function | A function after clicked on call button
-**onMute** | function |
-**onVideo** | function |
-**onDialPad** | function |
-**onAddCall** | function |  
-**onTransferCall** | function |  
-**onRecord** | function |  
-**onHold** | function |  
-**onPark** | function |  
-**onHangup** | function |
+**onMute** | function | A function after clicked on mute button
+**onVideo** | function | A function after clicked on video button
+**onDialPad** | function | A function after clicked return dial pad button
+**onAddCall** | function |  A function after clicked on add new call button
+**onTransferCall** | function |  A function after clicked on transfer call button
+**onRecord** | function |  A function after clicked on record button
+**onHold** | function |  A function after clicked on hold button
+**onPark** | function |  A function after clicked on park button
+**onHangup** | function | A function after clicked on hangup button
 
 ## Extra
+npm install
 
 npm run dev
 

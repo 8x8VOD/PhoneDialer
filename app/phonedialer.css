@@ -112,6 +112,7 @@ text-align: left;
     margin: inherit;
     outline: inherit;
     width: inherit;
+    color: #000 !important;
 }
 
 input:focus {
@@ -265,6 +266,7 @@ input:focus~.highlight {
     padding: 10px;
     border-radius: 50%;
     margin: 10px 10px;
+    cursor: pointer;
 }
 
 .phonePad .keyRow>div:hover {
