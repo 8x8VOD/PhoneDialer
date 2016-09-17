@@ -27,6 +27,7 @@ export default class PhoneDialer extends Component {
     this.onParkClick = this.onParkClick.bind(this);
     this.onHangupClick = this.onHangupClick.bind(this);
 
+    this.onKeyClick = this.onKeyClick.bind(this);
   }
 
   updateInputValue(evt){
@@ -78,7 +79,10 @@ export default class PhoneDialer extends Component {
   onHangupClick() {
     this.setState({ phonePadIndex: 0 });
   }
-
+  onKeyClick(e) {
+    let currentKeyValue = this.state.inputValue + "" + e.currentTarget.dataset.ref;
+    this.setState({ inputValue: currentKeyValue });
+  }
   render () {
     const style = {
       height: this.props.height || 'auto',
@@ -112,24 +116,24 @@ export default class PhoneDialer extends Component {
               </div>
             </div>
             <div className="keyRow">
-              <div>1<span>&nbsp;</span></div>
-              <div>2<span>ABC</span></div>
-              <div>3<span>DEF</span></div>
+              <div data-ref="1" onClick={this.onKeyClick}>1<span>&nbsp;</span></div>
+              <div data-ref="2" onClick={this.onKeyClick}>2<span>ABC</span></div>
+              <div data-ref="3" onClick={this.onKeyClick}>3<span>DEF</span></div>
             </div>
             <div className="keyRow">
-              <div>4<span>GHI</span></div>
-              <div>5<span>JKL</span></div>
-              <div>6<span>MNO</span></div>
+              <div data-ref="4" onClick={this.onKeyClick}>4<span>GHI</span></div>
+              <div data-ref="5" onClick={this.onKeyClick}>5<span>JKL</span></div>
+              <div data-ref="6" onClick={this.onKeyClick}>6<span>MNO</span></div>
             </div>
             <div className="keyRow">
-              <div>7<span>PQRS</span></div>
-              <div>8<span>TUV</span></div>
-              <div>9<span>WXYZ</span></div>
+              <div data-ref="7" onClick={this.onKeyClick}>7<span>PQRS</span></div>
+              <div data-ref="8" onClick={this.onKeyClick}>8<span>TUV</span></div>
+              <div data-ref="9" onClick={this.onKeyClick}>9<span>WXYZ</span></div>
             </div>
             <div className="keyRow">
-              <div>*</div>
-              <div>0</div>
-              <div>#</div>
+              <div data-ref="*" onClick={this.onKeyClick}>*</div>
+              <div data-ref="0" onClick={this.onKeyClick}>0</div>
+              <div data-ref="#" onClick={this.onKeyClick}>#</div>
             </div>
             <div className="keyRow">
               <div className="call" onClick={this.onCallingClick}>
