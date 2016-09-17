@@ -112,6 +112,7 @@ text-align: left;
     margin: inherit;
     outline: inherit;
     width: inherit;
+    color: #000 !important;
 }
 
 input:focus {
