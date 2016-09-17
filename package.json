@@ -20,7 +20,7 @@
     "react",
     "PhoneDialer"
   ],
-  "author": "Tony Chen <tony.chen@8x8.com",
+  "author": "Tony Chen <tony.chen@8x8.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/8x8VOD/PhoneDialer/issues"
