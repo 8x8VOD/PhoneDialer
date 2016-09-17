@@ -82,6 +82,7 @@ name | type | description
 **onHangup** | function | A function after clicked on hangup button
 
 ## Extra
+npm install
 
 npm run dev
 
