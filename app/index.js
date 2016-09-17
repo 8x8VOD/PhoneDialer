@@ -39,8 +39,10 @@ export default class PhoneDialer extends Component {
   }
 
   onCallingClick() {
-    this.setState({ phonePadIndex: 1 });
-    this.props.onSubmitNumber(this.state.inputValue);
+    if (!(this.state.inputValue === '')) {
+      this.setState({ phonePadIndex: 1 });
+      this.props.onSubmitNumber(this.state.inputValue);
+    }
   }
 
   onMuteClick() {
