@@ -77,8 +77,8 @@ name | type | description
 **onAddCall** | function |  A function after clicked on add new call button
 **onTransferCall** | function |  A function after clicked on transfer call button
 **onRecord** | function |  A function after clicked on record button
-**onHold** | function |  A function after clicked on hold call button
-**onPark** | function |  A function after clicked on park call button
+**onHold** | function |  A function after clicked on hold button
+**onPark** | function |  A function after clicked on park button
 **onHangup** | function | A function after clicked on hangup button
 
 ## Extra
