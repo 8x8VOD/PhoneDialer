@@ -9,12 +9,6 @@ var common = {
     entry: {},
     output: {},
     module: {
-        preLoaders: [{
-            test: /\.jsx?$/,
-            loaders: ['eslint-loader'],
-            include: path.join(__dirname, '/app'),
-            exclude: path.join(__dirname, '/lib')
-        }],
         loaders: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
