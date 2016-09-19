@@ -6,10 +6,16 @@ var isDevelopment = process.env.NODE_ENV !== 'production';
 var BUILD_PATH = path.resolve(__dirname, 'lib');
 
 var common = {
-        entry: {},
-        output: {},
-        module: {
-            loaders: [{
+    entry: {},
+    output: {},
+    module: {
+        preLoaders: [{
+            test: /\.jsx?$/,
+            loaders: ['eslint-loader'],
+            include: path.join(__dirname, '/app'),
+            exclude: path.join(__dirname, '/lib')
+        }],
+        loaders: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel'
@@ -34,7 +40,11 @@ var common = {
                 loader: "url?limit=10000&mimetype=image/svg+xml"
             }
 
-        ]
+        ],
+        eslint: {
+            configFile: './.eslintrc', //your .eslintrc file
+            emitWarning: true
+        }
     },
     plugins: [
         new webpack.NoErrorsPlugin()
